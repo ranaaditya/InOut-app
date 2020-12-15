@@ -1,4 +1,7 @@
 package com.ranaaditya.hackinout.db
 
-class AppDataBase {
+import android.content.Context
+
+class AppDataBase(ctx: Context) {
+
 }

@@ -1,4 +1,12 @@
 package com.ranaaditya.hackinout.api
 
-class LoginResponse {
-}
+import com.google.gson.annotations.SerializedName
+
+data class LoginResponse(
+
+    @SerializedName("sucess")
+    var sucess: Boolean,
+
+    @SerializedName("message")
+    var msg: String
+)

@@ -11,9 +11,9 @@ import java.util.concurrent.TimeUnit
 
 object ApiUtils {
 
-    const val BASE_URL = ""
-    const val LOGIN_URL = "login/"
-    const val SIGNUP_URL = "signup/"
+    const val BASE_URL = "<yourlocal_host/IP>:port_running_docker/api/"
+    const val LOGIN_URL = "auth/login"
+    const val SIGNUP_URL = "auth/register"
     const val PAYLOAD_URL = "payload"
 
     fun provideOkHttpClient(interceptor: HttpLoggingInterceptor): OkHttpClient =
