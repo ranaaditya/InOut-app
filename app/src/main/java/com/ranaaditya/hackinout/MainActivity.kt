@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val user = LoginRequest("9500588159", "P@\$\$w0rd")
+        val user = LoginRequest("", "")
 
-        //makeUserLogin(user)
+        makeUserLogin(user)
 
     }
 
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val httpsinterceptor =
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 
-        val client = ApiUtils.provideOkHttpClient(httpsinterceptor)
+        val client = ApiUtils.provideOkHttpClient(httpsinterceptor, this@MainActivity)
 
         val gson = ApiUtils.provideGson()
 
@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         withContext(Dispatchers.Main) {
+            Log.d("is success", response.sucess.toString())
             if (response.sucess) {
                 Log.d("LOGIN SUCCESSFUL", response.toString())
             } else {
