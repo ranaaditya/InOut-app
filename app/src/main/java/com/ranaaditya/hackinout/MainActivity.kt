@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val user = LoginRequest("", "")
 
-        makeUserLogin(user)
+        //makeUserLogin(user)
 
     }
 
