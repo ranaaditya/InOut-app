@@ -25,29 +25,29 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun makeUserLogin(loginRequest: LoginRequest) = lifecycleScope.launch {
-        val httpsinterceptor =
-            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-
-        val client = ApiUtils.provideOkHttpClient(httpsinterceptor, this@MainActivity)
-
-        val gson = ApiUtils.provideGson()
-
-        val retrofit = ApiUtils.provideRetrofit(client, gson)
-
-        val response = withContext(Dispatchers.IO) {
-            retrofit.login(loginRequest)
-        }
-
-        withContext(Dispatchers.Main) {
-            Log.d("is success", response.sucess.toString())
-            if (response.sucess) {
-                Log.d("LOGIN SUCCESSFUL", response.toString())
-            } else {
-                Log.d("LOGIN FAILED", response.toString())
-            }
-
-        }
-
-    }
+//    fun makeUserLogin(loginRequest: LoginRequest) = lifecycleScope.launch {
+//        val httpsinterceptor =
+//            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+//
+//        val client = ApiUtils.provideOkHttpClient(httpsinterceptor, this@MainActivity)
+//
+//        val gson = ApiUtils.provideGson()
+//
+//        val retrofit = ApiUtils.provideRetrofit(client, gson)
+//
+//        val response = withContext(Dispatchers.IO) {
+//            retrofit.login(loginRequest)
+//        }
+//
+//        withContext(Dispatchers.Main) {
+//            Log.d("is success", response.sucess.toString())
+//            if (response.sucess) {
+//                Log.d("LOGIN SUCCESSFUL", response.toString())
+//            } else {
+//                Log.d("LOGIN FAILED", response.toString())
+//            }
+//
+//        }
+//
+//    }
 }
