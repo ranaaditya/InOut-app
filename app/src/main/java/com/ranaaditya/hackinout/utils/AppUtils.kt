@@ -10,6 +10,17 @@ object AppUtils {
 
     const val DAY: Long = 86400 * 1000
 
+    val MoodMap = mapOf(
+        1 to R.drawable.anxious,
+        2 to R.drawable.bored,
+        3 to R.drawable.bored,
+        4 to R.drawable.envious,
+        5 to R.drawable.gloomy,
+        6 to R.drawable.inferior,
+        7 to R.drawable.upset,
+        8 to R.drawable.stressed
+    )
+
     fun isSYstemApplication(pkgm: PackageManager, pkgname: String): Boolean {
         var isSystemApp: Boolean = false
 
@@ -86,5 +97,20 @@ object AppUtils {
         return 0
     }
 
+//    fun getMood(i: Int): Int? {
+//        var arr = mapOf<Int, Int>()
+//        arr[1] = R.drawable.anxious
+//        arr[2] = R.drawable.bored
+//        arr[3] = R.drawable.envious
+//        arr[4] = R.drawable.gloomy
+//        arr[5] = R.drawable.stressed
+//        arr[6] = R.drawable.tired
+//        arr[7] = R.drawable.upset
+//        arr[8] = R.drawable.inferior
+//
+//        return arr.get(i)
+//    }
+
+    fun getUserMood(i: Int) = MoodMap.getOrDefault(i, R.drawable.bored)
 
 }
