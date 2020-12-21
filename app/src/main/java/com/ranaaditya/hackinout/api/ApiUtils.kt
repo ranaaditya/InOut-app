@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit
 
 object ApiUtils {
 
-    const val BASE_URL = "http://192.168.43.33:9989/api/"
+    const val BASE_URL = "http://172.19.0.1:9989/api/"
     const val LOGIN_URL = "auth/login"
     const val SIGNUP_URL = "auth/register"
     const val PAYLOAD_URL = "payload"

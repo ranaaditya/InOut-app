@@ -2,10 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/status_fragment_root_layout"
-    android:background="@drawable/gradient_animation"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_animation">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your daily Stat is here !"
+        style="@style/headerTextPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        android:textSize="30sp"
+        android:textColor="#d1f2eb"
+        />
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -14,20 +26,44 @@
         android:text="Wait Server is loading your data"
         android:textColor="@color/blue"
         android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/mood_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:visibility="gone"
-        android:src="@drawable/anxious"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/moodtext"
+        style="@style/headerTextPrimary"
+        android:textColor="@color/gradient_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hey rana ! your mood is sad today !"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mood_image"
+        />
+
+    <TextView
+        style="@style/headerTextPrimary"
+        android:textColor="@color/gradient_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review your whole Week !"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/moodtext"
+        android:layout_margin="25dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

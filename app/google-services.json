@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "680946004465",
+    "project_id": "inout-app-77569",
+    "storage_bucket": "inout-app-77569.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680946004465:android:95312fd332b63b19c89450",
+        "android_client_info": {
+          "package_name": "com.ranaaditya.hackinout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "680946004465-riukkg3uuaaju7ubesuli31cpp689lsv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDM2Hc8V9JV-HlpN_d7Jzof5SLn9JeMr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "680946004465-riukkg3uuaaju7ubesuli31cpp689lsv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

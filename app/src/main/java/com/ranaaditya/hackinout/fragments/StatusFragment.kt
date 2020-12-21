@@ -13,7 +13,8 @@ import com.ranaaditya.hackinout.utils.AppUtils
 
 class StatusFragment : Fragment(R.layout.fragment_status) {
 
-    var index = 1
+    var index = 0
+    var moodtextindex = 0
 
     lateinit var binding: FragmentStatusBinding
 
@@ -27,9 +28,9 @@ class StatusFragment : Fragment(R.layout.fragment_status) {
 
         binding = FragmentStatusBinding.bind(view)
 
-         binding.moodImage.visibility = View.INVISIBLE
+        binding.moodImage.visibility = View.INVISIBLE
 
-        //activity?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+        activity?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 
         val animDrawable = binding.statusFragmentRootLayout.background as AnimationDrawable
 
@@ -39,21 +40,28 @@ class StatusFragment : Fragment(R.layout.fragment_status) {
 
         runnableCode = object : Runnable {
 
-            @SuppressLint("UseCompatLoadingForDrawables")
+            @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
             override fun run() {
+
+
                 Log.d("USER", "LOGGING")
 
                 binding.textView.visibility = View.GONE
                 binding.moodImage.visibility = View.VISIBLE
                 index %= 8
+                moodtextindex %= 8
+
                 Log.d("USER MOOD", activity?.getDrawable(AppUtils.getUserMood(index)).toString())
 
                 // fuck android dev !
                 //binding.moodImage.setImageDrawable(activity!!.getDrawable(AppUtils.getUserMood(index)))
                 binding.moodImage.background = activity?.getDrawable(AppUtils.getUserMood(index))
-                index++
 
-                handler.postDelayed(this, 3000)
+                binding.moodtext.text = "Hey rana your Mood is " + AppUtils.getMoodName(moodtextindex) + " !"
+                index++
+                moodtextindex++
+
+                handler.postDelayed(this, 5000)
             }
         }
 

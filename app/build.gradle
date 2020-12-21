@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdkVersion 30
@@ -25,6 +27,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
         }
     }
 
@@ -66,5 +69,13 @@ dependencies {
     // navigation component dependencies
     implementation "androidx.navigation:navigation-fragment-ktx:2.3.2"
     implementation "androidx.navigation:navigation-ui-ktx:2.3.2"
+
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
+
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
+
+   // implementation 'com.google.firebase:firebase-crashlytics-ndk:17.3.0'
+
+
 
 }

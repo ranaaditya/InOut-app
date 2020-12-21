@@ -33,6 +33,7 @@
 
     <style name="headerTextPrimary" parent="headerText">
         <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:fontFamily">@font/raleway_medium</item>
     </style>
 
     <style name="modifiedEditText" parent="parent">

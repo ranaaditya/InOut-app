@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/login_fragment_root_layout"
+    android:background="@drawable/gradient_animation">
 
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,6 +19,7 @@
         app:cardCornerRadius="@dimen/loginCardRadius">
 
 
+
         <LinearLayout
             style="@style/linearParent"
             android:layout_gravity="center"
@@ -24,8 +27,21 @@
 
             <TextView
                 style="@style/headerTextPrimary"
+                android:textStyle="bold"
+                android:textColor="#d11d53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Moody Friend"
+                android:gravity="center"
+                android:textSize="40sp"
+                />
+
+            <TextView
+                style="@style/headerTextPrimary"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 android:fontFamily="@font/raleway_medium"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:text="Login" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -34,7 +50,7 @@
                 android:layout_marginTop="@dimen/loginViewsMargin">
 
                 <EditText
-                    android:id="@+id/loginwebmail"
+                    android:id="@+id/loginphonenumber"
                     style="@style/modifiedEditText"
                     android:hint="@string/login_phone_number_hint"
                     android:inputType="textEmailAddress"
