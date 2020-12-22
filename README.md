@@ -16,3 +16,10 @@ The app currently uses the following submodules:
 <a href="https://github.com/adityaa30/Inout-Backend"> Backend </a>
 <br>
 <a href="https://github.com/geforce6t/Mood-extraction"> Mood extractor Model </a>
+
+## 📸 Screenshots
+
+||||
+|:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
+| ![Imgur](https://i.imgur.com/D3GnXYx.png) | ![Imgur](https://i.imgur.com/T6VNWGh.png) | ![Imgur](https://i.imgur.com/M6G6hD7.png) |
+| ![Imgur](https://i.imgur.com/zMAfWnQ.png) | ![Imgur](https://i.imgur.com/e4ToJfT.png) | ![Imgur](https://i.imgur.com/vQFg48o.jpg?1) |
